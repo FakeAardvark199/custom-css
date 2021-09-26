@@ -1,0 +1,174 @@
+/* Dm Bubble */
+@import url('https://xhylo.github.io/DmBubblesearch/SearchSC.css');
+
+/* Settings Window Icons */
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+:root {
+    --settingsiconssize: 18px;
+    --settingsiconsgap: 14px;
+}
+
+/* Textbox Button Transitions */
+.channelTextArea-rNsIhG .buttons-3JBrkn > * { position: relative; top: -44px;}
+.channelTextArea-rNsIhG:hover .buttons-3JBrkn > * { top: 0;}
+.channelTextArea-rNsIhG .buttons-3JBrkn > :first-child { transition: top 300ms;}
+.channelTextArea-rNsIhG .buttons-3JBrkn > :nth-child(2) { transition: top 250ms;}
+.channelTextArea-rNsIhG .buttons-3JBrkn > :nth-child(3) { transition: top 200ms;}
+.channelTextArea-rNsIhG .buttons-3JBrkn > :last-child { transition: top 150ms;}
+
+/* Color Links */
+[href*="youtu.be"],
+[href*="youtube.com"] {
+    color:#c4302b !important;
+}
+[href*="twitch.tv"] {
+    color:#6441a5 !important;
+}
+[href*="open.spotify.com"]
+[href*="spotify.com"] {
+    color: #9CAF88 !important; 
+}
+[href*="reddit.com"],
+[href*="redd.it"] {
+    color:#e05a0c !important; 
+}
+[href*="instagram.com/"]{
+    background: -webkit-linear-gradient(80deg, rgb(255, 238, 0), rgb(255, 157, 11), #b700ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+[href*="twitter.com/"]{
+    color:#00acee !important;
+}
+[href*="betterdiscord.app/"]{
+    color: #3e82e5 !important;
+}
+[href*="discord.com/channels/"] {
+    color:#7289da !important;
+}[href*="discord.com/channels/"]::before {
+    content:'Jump to Message : ';
+    font-size: 16px;
+    font-weight: 425;
+    color: #603cff;
+}
+[href*="discord.com/"],[href*="media.discordapp.net/"],[href*="cdn.discordapp.com/"],[href*="discord.gg/"],
+[href*="discord.bio/"],[href*="discord.id/"],[href*="discord.status/"],[href*="discord.boats/"],[href*="discord.club/"]{
+    color: #7289da !important;
+}
+[href*="github.com"]{
+    color:#00f0a8 !important;
+}
+[href*="facebook.com"]{
+    color:#3b5998 !important;
+}
+[href*="store.steampowered.com"],
+[href*="https://s.team"],
+[href*="steamcommunity.com/"] {
+    color:#1b2838 !important; 
+}
+[href*="soundcloud.com"] {
+    color:#ff7700 !important; 
+}
+[href*="osu.ppy.sh/"] {
+    color:#ff66aa !important; 
+}
+
+/* More space-efficient settings layout */
+.sidebarRegion-VFTUkN,
+.sidebarRegionScroller-3MXcoP {
+    flex: 0 0 auto;
+}.contentColumnDefault-1VQkGM {
+    max-width: unset;
+}
+
+/* Resizable Thread Window */
+:root {
+    --sidebar-width: 240px; /* change if your theme resizes the sidebar */
+}.chat-3bRxxu.threadSidebarOpen-vdkwIh {
+    resize: horizontal;
+    min-width: 400px;
+    max-width: calc(100vw - var(--sidebar-width) - 72px - 400px);
+}.chat-3bRxxu:not(.threadSidebarOpen-vdkwIh) {
+    width: unset !important;
+    flex: 1 1 auto;
+}.threadSidebar-1o3BTy {
+    width: unset;
+    flex: 1 1 auto;
+}
+
+/* Remove Maximum Size limitation for detached Addon and CustomCSS Editor */
+#floating-editor-window.resizable {
+    max-height: unset;
+    max-width: unset;
+}
+
+/* Embeds Redesign Part 1*/
+:root{ --embed-border-radius: 8px; } 
+.embed-IeVjo6 { border-radius: var(--embed-border-radius); } 
+.embed-IeVjo6 code{ background: var(--background-secondary); }
+
+:root{
+    --embed-line-width: 256px; 
+} 
+.embedWrapper-lXpS3L{ 
+} 
+.embedFull-2tM8--{
+    border-left: calc(4px + var(--embed-line-width)) solid var(--background-accent);
+    background: var(--background-secondary);
+} .grid-1nZz7S {
+    margin-left: calc( -1 * var(--embed-line-width));
+    z-index: 1;
+} .embedFull-2tM8--:after, .embedFull-2tM8--:before{
+    content: "";
+    height: 100%;
+    width: var(--embed-line-width);
+    position: absolute;
+    top: 0;
+    left: calc(-1 * var(--embed-line-width));
+} .embedFull-2tM8--:after{
+    background: linear-gradient(to right, transparent, var(--background-secondary));
+} .embedFull-2tM8--:before{
+    background: var(--background-secondary);
+    opacity: .8;
+}
+
+/* Embeds Redesign Part 2 */
+/* on pause */ 
+
+/* Emote Fix */
+img.emote {
+    text-indent: 0;
+    white-space: nowrap;
+    width: auto;
+    position: relative;
+    top: 0.25ex;
+}
+
+/* Show message edit time */
+.cozyMessage-3V1Y8y:not(.systemMessage-1I9LCe) .markup-2BOw-j:hover .timestampInline-yHQ6fX>[aria-label]::after {
+    content:"- " attr(aria-label);
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: 5px;
+}
+
+/* Hide Help Icon */
+.toolbar-1t6TWx a {
+  display: none;
+}
+
+/* Show Discord even when you don't have internet */
+.container-16j22k {background: transparent; pointer-events: none}
+.container-16j22k>div {display: none}
+.container-16j22k::before {
+    content: "You've gone offline";
+    display: block;
+    bottom: 24px; right: 24px;
+    position: absolute;
+    padding: 8px 16px;
+    background-color: #f04747;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500
+}
